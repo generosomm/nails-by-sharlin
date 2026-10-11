@@ -18,6 +18,7 @@ const colorShades = {
 Object.entries(colorShades).forEach(([name, shades]) => {
   const button = [...document.querySelectorAll('[data-color]')].find(item => item.dataset.color === name);
   button?.style.setProperty('--swatch', shades[0]);
+  document.querySelector(`[data-color-choice="${name}"]`)?.closest('label').style.setProperty('--swatch', shades[0]);
 });
 function updateColorPreview(name) {
   document.querySelector('#color-preview-name').textContent = `Preview: ${name || 'Chic'}`;
@@ -109,7 +110,16 @@ select.addEventListener('change', updateMessage);
 visit.addEventListener('change', updateMessage);
 color.addEventListener('change', updateMessage);
 color.addEventListener('change', syncColorButtons);
+document.querySelectorAll('[name="color-preference"]').forEach(input => {
+  input.addEventListener('change', () => {
+    color.value = input.value;
+    color.dispatchEvent(new Event('change'));
+  });
+});
 function syncColorButtons() {
+  document.querySelectorAll('[name="color-preference"]').forEach(input => {
+    input.checked = input.value === color.value;
+  });
   updateColorPreview(color.value);
   chooseHeroColor(color.value);
   document.querySelectorAll('[data-color]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.color === color.value)));

@@ -9,3 +9,5 @@ Review: removed redundant large slogans, decorative service symbols and repeated
 Hero color preview: cycles through the nine photo-based approximate shades every 6.5 seconds with a 1.6-second opacity crossfade. Uses sparse timers, pauses offscreen or in a hidden tab, and respects reduced motion. Pause/play is explicit; choosing a color stops autoplay. Hero cycling never alters the inquiry or its selected color.
 
 Color selection now lives beside the hero fan as nine accessible 44px swatch buttons. The separate lower color grid and nail preview have been consolidated into the hero. Clicking a shade pauses cycling and includes that shade in the inquiry.
+
+Booking color preference uses a native radio grid with visible shade circles and names. Full-row labels provide 48px touch targets, keyboard arrow navigation and focus rings. Hero and booking selections stay synchronized. Native service/visit selects use 16px text for mobile.
