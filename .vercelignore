@@ -1,5 +1,7 @@
 .git/
 screenshots/
+output/
+tmp/
 node_modules/
 README.md
 DESIGN.md
