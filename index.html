@@ -10,8 +10,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nails by Sharline">
   <meta property="og:url" content="https://nails-by-sharline.vercel.app/">
-  <meta property="og:image" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=6">
-  <meta property="og:image:secure_url" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=6">
+  <meta property="og:image" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=7">
+  <meta property="og:image:secure_url" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=7">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nails by Sharline | Your little nail reset.">
   <meta name="twitter:description" content="Nail services at Generoso Sari-Sari Store, Phase 2, Mt. Claire Village. Home service within Mt. Claire Village only.">
-  <meta name="twitter:image" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=6">
+  <meta name="twitter:image" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=7">
   <link rel="canonical" href="https://nails-by-sharline.vercel.app/">
   <title>Nails by Sharline | Nail services</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
@@ -48,12 +48,26 @@
           <div class="nail-fan"><div class="nail nail-1"></div><div class="nail nail-2"></div><div class="nail nail-3"></div><div class="nail nail-4"></div><div class="nail nail-5"></div></div>
           <div class="pedestal"></div><span class="spark spark-1">✧</span><span class="spark spark-2">✧</span>
         </div>
-        <a class="palette" href="#colors"><p>Find your favorite <span>9 available colors</span></p><span aria-hidden="true">↗</span></a>
+        <div class="hero-palette" id="colors">
+          <p class="palette-intro">9 available colors. Tap a shade to try it.</p>
+          <div class="hero-swatches" role="group" aria-label="Available nail colors">
+            <button type="button" data-color="Banana boat" aria-label="Preview Banana boat" title="Banana boat" aria-pressed="false"><span aria-hidden="true" class="color-dot"></span></button>
+            <button type="button" data-color="Lucky red" aria-label="Preview Lucky red" title="Lucky red" aria-pressed="false"><span aria-hidden="true" class="color-dot"></span></button>
+            <button type="button" data-color="Blue suede" aria-label="Preview Blue suede" title="Blue suede" aria-pressed="false"><span aria-hidden="true" class="color-dot"></span></button>
+            <button type="button" data-color="Ashley" aria-label="Preview Ashley" title="Ashley" aria-pressed="false"><span aria-hidden="true" class="color-dot"></span></button>
+            <button type="button" data-color="White satin" aria-label="Preview White satin" title="White satin" aria-pressed="false"><span aria-hidden="true" class="color-dot"></span></button>
+            <button type="button" data-color="Touch of tan" aria-label="Preview Touch of tan" title="Touch of tan" aria-pressed="false"><span aria-hidden="true" class="color-dot"></span></button>
+            <button type="button" data-color="Almond" aria-label="Preview Almond" title="Almond" aria-pressed="false"><span aria-hidden="true" class="color-dot"></span></button>
+            <button type="button" data-color="Chic" aria-label="Preview Chic" title="Chic" aria-pressed="false"><span aria-hidden="true" class="color-dot"></span></button>
+            <button type="button" data-color="Pure black" aria-label="Preview Pure black" title="Pure black" aria-pressed="false"><span aria-hidden="true" class="color-dot"></span></button>
+          </div>
+          <span id="color-preview-name" class="visually-hidden" role="status"></span>
+        </div>
         <div class="color-playback">
           <span id="hero-color-name">Chic</span>
           <button id="color-playback" type="button" aria-label="Pause automatic color preview">Pause colors</button>
         </div>
-        
+        <p class="hero-shade-note">Photo-based previews. Actual shades may vary.</p>
       </div>
     </section>
     <section class="services wrap" id="services" aria-labelledby="services-title">
@@ -65,7 +79,7 @@
         <a class="service" href="#contact" data-service="Foot Spa + Pedicure"><span class="service-symbol" aria-hidden="true">≈</span><div><h3>Foot spa + pedicure</h3></div><span class="price">₱300</span><span class="service-arrow" aria-hidden="true">↗</span></a>
         <a class="service" href="#contact" data-service="Manicure + Pedicure + Foot Spa"><span class="service-symbol" aria-hidden="true">✧</span><div><h3>All three</h3><p>Manicure + pedicure + foot spa.</p></div><span class="price">₱400</span><span class="service-arrow" aria-hidden="true">↗</span></a>
       </div>
-      <div class="color-menu" id="colors"><h3>Available colors</h3><p>Choose a shade. See it on the nail preview.</p><div class="color-display"><div class="color-options" role="group" aria-label="Available nail colors"><button type="button" data-color="Banana boat" aria-pressed="false">Banana boat</button><button type="button" data-color="Lucky red" aria-pressed="false">Lucky red</button><button type="button" data-color="Blue suede" aria-pressed="false">Blue suede</button><button type="button" data-color="Ashley" aria-pressed="false">Ashley</button><button type="button" data-color="White satin" aria-pressed="false">White satin</button><button type="button" data-color="Touch of tan" aria-pressed="false">Touch of tan</button><button type="button" data-color="Almond" aria-pressed="false">Almond</button><button type="button" data-color="Chic" aria-pressed="false">Chic</button><button type="button" data-color="Pure black" aria-pressed="false">Pure black</button></div><div class="color-preview"><div class="sample-stage" aria-hidden="true"><div class="nail sample-nail"></div><div class="sample-shadow"></div></div><p class="color-preview-name" id="color-preview-name" role="status">Preview: Chic</p><p class="shade-note">Photo-based previews. Actual shades may vary.</p></div></div></div>
+
     </section>
     <section class="contact wrap" id="contact" aria-labelledby="contact-title">
       <div class="contact-copy"><h2 id="contact-title">Message me<br>on Facebook.</h2><p>Visit Sharline at <strong>Generoso Sari-Sari Store</strong>,<br>Phase 2, Mt. Claire Village.</p><p><strong>Prefer to stay home?</strong><br>Home service within Mt. Claire Village only.</p><a class="facebook-contact" href="https://www.facebook.com/sharlinemae.albino.71" target="_blank" rel="noopener noreferrer">Sharline Albino (Camille) on Facebook <span aria-hidden="true">↗</span></a><p class="preferred-contact">Facebook is the preferred way to reach Sharline.</p></div>

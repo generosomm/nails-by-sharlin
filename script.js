@@ -20,10 +20,6 @@ Object.entries(colorShades).forEach(([name, shades]) => {
   button?.style.setProperty('--swatch', shades[0]);
 });
 function updateColorPreview(name) {
-  const shades = colorShades[name] || colorShades.Chic;
-  ['--shade', '--shade-light', '--shade-dark'].forEach((property, index) => {
-    document.documentElement.style.setProperty(property, shades[index]);
-  });
   document.querySelector('#color-preview-name').textContent = `Preview: ${name || 'Chic'}`;
 }
 updateColorPreview('Chic');
