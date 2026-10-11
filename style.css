@@ -40,7 +40,7 @@ select{font-size:15px;color:var(--ink);width:100%;min-height:48px;padding:12px 1
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.button:hover{transform:none}}
 
 /* Only the five hero nails crossfade; the chosen inquiry shade stays independent. */
-.hero-colors .nail::before{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(ellipse at 23% 25%,#ffffffac 0%,transparent 22%),linear-gradient(105deg,var(--next-shade-dark),var(--next-shade) 24%,var(--next-shade-light) 42%,var(--next-shade) 68%,var(--next-shade-dark));box-shadow:inset 2px 0 4px #ffffff77,inset -5px -3px 8px #00000033;opacity:0;transition:opacity 1.6s ease-in-out}
+.hero-colors .nail::before{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(ellipse at 23% 25%,#ffffffac 0%,transparent 22%),linear-gradient(105deg,var(--next-shade-dark),var(--next-shade) 24%,var(--next-shade-light) 42%,var(--next-shade) 68%,var(--next-shade-dark));box-shadow:inset 2px 0 4px #ffffff77,inset -5px -3px 8px #00000033;opacity:0;transition:opacity 1.2s ease-in-out}
 .hero-colors.fading .nail::before{opacity:1;will-change:opacity}
 .hero-colors.settled .nail::before{transition:none}
 .color-playback{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:8px;font-size:12px;color:var(--muted)}

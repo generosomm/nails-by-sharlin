@@ -66,8 +66,8 @@ function scheduleColors() {
     fadeTimer = setTimeout(() => {
       settleHero();
       scheduleColors();
-    }, 1600);
-  }, 4900);
+    }, 1200);
+  }, 1800);
 }
 function updatePlayback() {
   playback.hidden = reducedMotion.matches;
