@@ -12,3 +12,5 @@
 
 .home-note{font-size:13px;color:var(--plum);margin:10px 0 0}.visit-label{margin-top:18px}.contact-copy strong{font-weight:600}
 
+
+.color-menu{margin-top:44px}.color-menu h3{font-size:23px;font-weight:500;margin:0}.color-menu>p{font-size:14px;color:var(--muted);margin:8px 0 18px}.color-options{display:flex;flex-wrap:wrap;gap:10px}.color-options button{border:1px solid var(--line);border-radius:24px;padding:12px 18px;min-height:44px;background:var(--white);color:var(--ink);font-size:14px}.color-options button[aria-pressed=true]{background:var(--plum);color:var(--white);border-color:var(--plum)}.color-options button:hover{border-color:var(--plum)}
