@@ -1,13 +1,15 @@
-# Poster-aligned design system
+# Sharline light studio redesign
 
-White #ffffff, plum #57334f, ink #302333, muted #6b5f70, line #ddd5e0, contact panel #eee8f1. Segoe UI across poster and website, with light headlines and bold plum prices.
+Direction: adapt the portfolio's oversized layered lettering and sculptural hero to Sharline's nail services. Keep one memorable composition rather than a side-by-side template. Light mode, plum branding, real services and Facebook-first inquiry.
 
-Layout: poster headline and one sculptural nail fan; plain price rows; a consistent nine-color grid with one individual 3D nail preview; the poster's lavender contact panel with Facebook as the primary action.
+Tokens: canvas #fcfafd, white #ffffff, plum #57334f, ink #302333, muted #6b5f70, lavender #eee8f1. Clash Display 600 for large sculptural headings; Satoshi 400/700 for readable controls and body. Both self-hosted with swap and system fallbacks.
 
-Review: removed redundant large slogans, decorative service symbols and repeated nail fans. Use shared spacing and corner sizes. Keep menus legible, the inquiry preview optional, and contact steps concise. Preserve actual services, colors, visit limits and contact preferences.
+Layout:
+Header: signature left, navigation right.
+Hero: small location line, oversized layered title + glossy nail fan, then action and interactive shade bar.
+Services: quiet introduction left, price menu right. Stacks on mobile.
+Contact: lavender studio panel, visit details left and accessible native inquiry controls right.
 
-Hero color preview: cycles through the nine photo-based approximate shades every 3 seconds with a 1.2-second opacity crossfade. Uses sparse timers, pauses offscreen or in a hidden tab, and respects reduced motion. Pause/play is explicit; choosing a color stops autoplay. Hero cycling never alters the inquiry or its selected color.
+Critique: oversized lettering and overlapping glossy nails carry the identity. Remove repeated decorative cards and animated entrances. Use a single palette and control vocabulary. Preserve the same composition on mobile with reduced scale and natural wrapping. No heavy 3D runtime or per-frame JavaScript.
 
-Color selection now lives beside the hero fan as nine accessible 44px swatch buttons. The separate lower color grid and nail preview have been consolidated into the hero. Clicking a shade pauses cycling and includes that shade in the inquiry.
-
-Booking color preference uses a native radio grid with visible shade circles and names. Full-row labels provide 48px touch targets, keyboard arrow navigation and focus rings. Hero and booking selections stay synchronized. Native service/visit selects use 16px text for mobile.
+Color cycling: 3-second cycle, 1.2-second opacity crossfade; pause/play, manual selection pause, hidden-tab/offscreen pause and reduced-motion support. Hero and booking selections synchronize, autoplay never changes the inquiry.

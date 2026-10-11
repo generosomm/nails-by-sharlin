@@ -1,0 +1,5 @@
+Self-hosted web fonts
+
+Clash Display 600 and Satoshi 400/700
+Indian Type Foundry, via Fontshare: https://www.fontshare.com
+ITF Free Font License, free for personal and commercial use including web embedding.

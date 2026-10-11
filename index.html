@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f3f7">
+  <meta name="theme-color" content="#fcfafd">
   <meta name="description" content="Nail services by Sharline Albino at Generoso Sari-Sari Store, Phase 2, Mt. Claire Village. Home service within Mt. Claire Village only. Contact Sharline on Facebook.">
   <meta property="og:title" content="Nails by Sharline | Your little nail reset.">
   <meta property="og:description" content="Manicure ₱100, pedicure ₱100, foot spa ₱250. Foot spa + pedicure ₱300. All three ₱400. Find Sharline at Generoso Sari-Sari Store, Phase 2. Home service within Mt. Claire Village only.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nails by Sharline">
   <meta property="og:url" content="https://nails-by-sharline.vercel.app/">
-  <meta property="og:image" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=7">
-  <meta property="og:image:secure_url" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=7">
+  <meta property="og:image" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=8">
+  <meta property="og:image:secure_url" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=8">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -19,10 +19,11 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nails by Sharline | Your little nail reset.">
   <meta name="twitter:description" content="Nail services at Generoso Sari-Sari Store, Phase 2, Mt. Claire Village. Home service within Mt. Claire Village only.">
-  <meta name="twitter:image" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=7">
+  <meta name="twitter:image" content="https://nails-by-sharline.vercel.app/assets/hero-preview.png?v=8">
   <link rel="canonical" href="https://nails-by-sharline.vercel.app/">
   <title>Nails by Sharline | Nail services</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/fonts/clash-display-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js" defer></script>
 </head>
@@ -30,25 +31,23 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="header wrap">
     <a class="brand" href="#" aria-label="Nails by Sharline, home"><span class="brand-mark" aria-hidden="true">s.</span><span>nails by sharline</span></a>
-    <nav aria-label="Main navigation"><a href="#services">Services</a><a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#colors">Colors</a><a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a></nav>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="intro">With Sharline Albino</p>
-        <h1 id="hero-title">Your little<br>nail reset.</h1>
-        <p class="lead">A little polish. A whole mood.</p>
-        <a class="button" href="#contact">Plan your nail day <span aria-hidden="true">↗</span></a>
-        <a class="hero-location" href="#contact">Generoso Sari-Sari Store, Phase 2</a>
-        <p class="home-note">Home service within Mt. Claire Village only.</p>
-      </div>
-      <div class="studio">
+      <div class="hero-top"><p>By Sharline Albino</p><a href="#contact">Mt. Claire Village, Phase 2 <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-composition">
+        <h1 id="hero-title"><span>Your little</span><span class="outline-title">nail reset.</span></h1>
         <div class="sculpture hero-colors settled" aria-hidden="true">
           
           <div class="nail-fan"><div class="nail nail-1"></div><div class="nail nail-2"></div><div class="nail nail-3"></div><div class="nail nail-4"></div><div class="nail nail-5"></div></div>
           <div class="pedestal"></div><span class="spark spark-1">✧</span><span class="spark spark-2">✧</span>
         </div>
-        <div class="hero-palette" id="colors">
+
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-copy"><p class="lead">A little polish. A whole mood.</p><a class="button" href="#contact">Plan your nail day <span aria-hidden="true">↗</span></a><p class="home-note">At the store or at home.<br>Home service within Mt. Claire Village only.</p></div>
+        <div class="studio">        <div class="hero-palette" id="colors">
           <p class="palette-intro">9 available colors. Tap a shade to try it.</p>
           <div class="hero-swatches" role="group" aria-label="Available nail colors">
             <button type="button" data-color="Banana boat" aria-label="Preview Banana boat" title="Banana boat" aria-pressed="false"><span aria-hidden="true" class="color-dot"></span></button>
@@ -68,10 +67,11 @@
           <button id="color-playback" type="button" aria-label="Pause automatic color preview">Pause colors</button>
         </div>
         <p class="hero-shade-note">Photo-based previews. Actual shades may vary.</p>
+</div>
       </div>
     </section>
     <section class="services wrap" id="services" aria-labelledby="services-title">
-      <div class="section-heading"><h2 id="services-title">Nail services</h2><p>A little care, at a simple price.</p></div>
+      <div class="section-heading"><h2 id="services-title">Little details.<br>Lovely days.</h2><p>Pick your nail-day ritual.<br>Simple services, clear prices.</p></div>
       <div class="service-list">
         <a class="service" href="#contact" data-service="Manicure"><span class="service-symbol" aria-hidden="true">✧</span><div><h3>Manicure</h3></div><span class="price">₱100</span><span class="service-arrow" aria-hidden="true">↗</span></a>
         <a class="service" href="#contact" data-service="Pedicure"><span class="service-symbol" aria-hidden="true">◡</span><div><h3>Pedicure</h3></div><span class="price">₱100</span><span class="service-arrow" aria-hidden="true">↗</span></a>
@@ -82,7 +82,7 @@
 
     </section>
     <section class="contact wrap" id="contact" aria-labelledby="contact-title">
-      <div class="contact-copy"><h2 id="contact-title">Message me<br>on Facebook.</h2><p>Visit Sharline at <strong>Generoso Sari-Sari Store</strong>,<br>Phase 2, Mt. Claire Village.</p><p><strong>Prefer to stay home?</strong><br>Home service within Mt. Claire Village only.</p><a class="facebook-contact" href="https://www.facebook.com/sharlinemae.albino.71" target="_blank" rel="noopener noreferrer">Sharline Albino (Camille) on Facebook <span aria-hidden="true">↗</span></a><p class="preferred-contact">Facebook is the preferred way to reach Sharline.</p></div>
+      <div class="contact-copy"><p class="contact-intro">Your next little reset</p><h2 id="contact-title">Let’s make it<br>a nail day.</h2><p>Visit Sharline at <strong>Generoso Sari-Sari Store</strong>,<br>Phase 2, Mt. Claire Village.</p><p><strong>Prefer to stay home?</strong><br>Home service within Mt. Claire Village only.</p><a class="facebook-contact" href="https://www.facebook.com/sharlinemae.albino.71" target="_blank" rel="noopener noreferrer">Sharline Albino (Camille) on Facebook <span aria-hidden="true">↗</span></a><p class="preferred-contact">Facebook is the preferred way to reach Sharline.</p></div>
       <div class="booking"><h3>Plan your nail day</h3><label for="service-select">Service</label><select id="service-select"><option>Manicure</option><option>Pedicure</option><option>Foot Spa</option><option>Foot Spa + Pedicure</option><option>Manicure + Pedicure + Foot Spa</option></select><select id="color-select" hidden aria-hidden="true" tabindex="-1"><option value="">Help me choose</option><option>Banana boat</option><option>Lucky red</option><option>Blue suede</option><option>Ashley</option><option>White satin</option><option>Touch of tan</option><option>Almond</option><option>Chic</option><option>Pure black</option></select><fieldset class="booking-colors"><legend>Color preference</legend><div class="booking-shades"><label class="shade-choice help-choice"><input type="radio" name="color-preference" value="" checked><span class="choice-face"><span>Help me choose</span></span></label><label class="shade-choice"><input type="radio" name="color-preference" value="Banana boat" data-color-choice="Banana boat"><span class="choice-face"><span class="color-dot" aria-hidden="true"></span><span>Banana boat</span></span></label><label class="shade-choice"><input type="radio" name="color-preference" value="Lucky red" data-color-choice="Lucky red"><span class="choice-face"><span class="color-dot" aria-hidden="true"></span><span>Lucky red</span></span></label><label class="shade-choice"><input type="radio" name="color-preference" value="Blue suede" data-color-choice="Blue suede"><span class="choice-face"><span class="color-dot" aria-hidden="true"></span><span>Blue suede</span></span></label><label class="shade-choice"><input type="radio" name="color-preference" value="Ashley" data-color-choice="Ashley"><span class="choice-face"><span class="color-dot" aria-hidden="true"></span><span>Ashley</span></span></label><label class="shade-choice"><input type="radio" name="color-preference" value="White satin" data-color-choice="White satin"><span class="choice-face"><span class="color-dot" aria-hidden="true"></span><span>White satin</span></span></label><label class="shade-choice"><input type="radio" name="color-preference" value="Touch of tan" data-color-choice="Touch of tan"><span class="choice-face"><span class="color-dot" aria-hidden="true"></span><span>Touch of tan</span></span></label><label class="shade-choice"><input type="radio" name="color-preference" value="Almond" data-color-choice="Almond"><span class="choice-face"><span class="color-dot" aria-hidden="true"></span><span>Almond</span></span></label><label class="shade-choice"><input type="radio" name="color-preference" value="Chic" data-color-choice="Chic"><span class="choice-face"><span class="color-dot" aria-hidden="true"></span><span>Chic</span></span></label><label class="shade-choice"><input type="radio" name="color-preference" value="Pure black" data-color-choice="Pure black"><span class="choice-face"><span class="color-dot" aria-hidden="true"></span><span>Pure black</span></span></label></div></fieldset><label class="visit-label" for="visit-select">Visit preference</label><select id="visit-select" aria-describedby="home-area"><option value="store">At Generoso Sari-Sari Store</option><option value="home">Home service in Mt. Claire Village</option></select><p class="booking-note" id="home-area">Home service is limited to Mt. Claire Village.</p><details class="inquiry-preview"><summary>Preview your inquiry</summary><p class="message-preview" id="message-preview"></p></details><button class="copy-inquiry" id="copy-inquiry" type="button">Copy inquiry</button><p class="copy-status" id="inquiry-status" role="status"></p><a class="button" id="facebook-link" href="https://www.facebook.com/sharlinemae.albino.71" target="_blank" rel="noopener noreferrer">Message on Facebook <span aria-hidden="true">↗</span></a><p class="booking-note">Copy your inquiry, then paste it after tapping Message on Sharline’s profile.</p><details class="backup-contact"><summary>Text or call instead</summary><a id="text-link" href="sms:+639635091844">Send inquiry by text</a><a href="tel:+639635091844">Call +63 963 509 1844</a><button class="copy-number" id="copy-number" type="button">Copy phone number</button><p class="copy-status" id="copy-status" role="status"></p></details></div>
     </section>
   </main>

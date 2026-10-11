@@ -86,6 +86,11 @@ playback.addEventListener('click', () => {
   updatePlayback();
   scheduleColors();
 });
+document.querySelector('.hero-swatches').addEventListener('focusin', () => {
+  userPaused = true;
+  scheduleColors();
+  updatePlayback();
+});
 document.addEventListener('visibilitychange', scheduleColors);
 reducedMotion.addEventListener('change', () => {
   updatePlayback();
