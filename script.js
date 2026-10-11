@@ -3,6 +3,31 @@ const textLink = document.querySelector('#text-link');
 const preview = document.querySelector('#message-preview');
 const visit = document.querySelector('#visit-select');
 const color = document.querySelector('#color-select');
+// Approximate digital shades based on Camille's supplied bottle photos.
+const colorShades = {
+  'Banana boat': ['#e2bb06', '#fff16b', '#9e7900'],
+  'Lucky red': ['#ad2924', '#e56957', '#661415'],
+  'Blue suede': ['#a7b3d4', '#e0e6fa', '#6b769b'],
+  'Ashley': ['#9c979b', '#e0dadd', '#62616a'],
+  'White satin': ['#f4f1f3', '#ffffff', '#bdbac4'],
+  'Touch of tan': ['#b68a5d', '#e9c898', '#785035'],
+  'Almond': ['#b8bdb8', '#e5e9df', '#7c847e'],
+  'Chic': ['#c34a99', '#f396d0', '#79285e'],
+  'Pure black': ['#202023', '#62626b', '#08090c']
+};
+Object.entries(colorShades).forEach(([name, shades]) => {
+  const button = [...document.querySelectorAll('[data-color]')].find(item => item.dataset.color === name);
+  button?.style.setProperty('--swatch', shades[0]);
+});
+function updateColorPreview(name) {
+  const shades = colorShades[name] || colorShades.Chic;
+  ['--shade', '--shade-light', '--shade-dark'].forEach((property, index) => {
+    document.documentElement.style.setProperty(property, shades[index]);
+  });
+  document.querySelector('#color-preview-name').textContent = `Preview: ${name || 'Chic'}`;
+}
+updateColorPreview('Chic');
+
 function updateMessage() {
   const location = visit.value === 'home' ? 'for home service within Mt. Claire Village' : 'at Generoso Sari-Sari Store, Phase 2, Mt. Claire Village';
   const message = `Hi Sharlin! I'd like to ask about ${select.value.toLowerCase()} ${location}. ${color.value ? `My color preference is ${color.value}. ` : ""}What schedules are available? Please confirm the final quote. Thank you!`;
@@ -15,6 +40,7 @@ visit.addEventListener('change', updateMessage);
 color.addEventListener('change', updateMessage);
 color.addEventListener('change', syncColorButtons);
 function syncColorButtons() {
+  updateColorPreview(color.value);
   document.querySelectorAll('[data-color]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.color === color.value)));
 }
 updateMessage();

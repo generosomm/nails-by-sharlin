@@ -18,7 +18,7 @@ From this directory, run `python -m http.server 4175`, then visit `http://localh
 
 Edit service descriptions, prices and contact details in `index.html`. Update the phone number and SMS message in `script.js` as well when changing the contact number. Visual tokens and color previews are in `style.css`.
 
-The decorative nail illustration is not an exact color sample or a photograph of Sharlin's work. Actual available colors are listed by their supplied names; precise visual swatches have not been provided. The supplied location is Generoso Sari-Sari Store, Phase 2, Mt. Claire Village. Home service is available within Mt. Claire Village only. No home-service fee, opening hours or testimonials have been supplied. Sharlin confirms visit details, availability and final pricing directly. Facebook: https://www.facebook.com/sharlinemae.albino.71.
+The decorative nail illustration is not an exact color sample or a photograph of Sharlin's work. The color dots and interactive nail previews use approximate digital shades based on Camille's supplied bottle photos. Actual shades can vary with lighting and display; choosing a color synchronizes the preview and SMS inquiry. The supplied location is Generoso Sari-Sari Store, Phase 2, Mt. Claire Village. Home service is available within Mt. Claire Village only. No home-service fee, opening hours or testimonials have been supplied. Sharlin confirms visit details, availability and final pricing directly. Facebook: https://www.facebook.com/sharlinemae.albino.71.
 
 ## Hosting
 
