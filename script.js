@@ -28,6 +28,80 @@ function updateColorPreview(name) {
 }
 updateColorPreview('Chic');
 
+// Sparse timers and opacity crossfades avoid a continuous JavaScript render loop.
+const heroColors = document.querySelector('.hero-colors');
+const playback = document.querySelector('#color-playback');
+const heroColorName = document.querySelector('#hero-color-name');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const shadeNames = Object.keys(colorShades);
+let heroShade = 'Chic';
+let nextHeroShade = null;
+let cycleTimer;
+let fadeTimer;
+let userPaused = false;
+let heroVisible = false;
+
+function setHeroShade(name, prefix = '--') {
+  ['shade', 'shade-light', 'shade-dark'].forEach((property, index) => {
+    heroColors.style.setProperty(`${prefix}${property}`, colorShades[name][index]);
+  });
+}
+function settleHero() {
+  clearTimeout(fadeTimer);
+  if (nextHeroShade) heroShade = nextHeroShade;
+  nextHeroShade = null;
+  setHeroShade(heroShade);
+  heroColors.classList.add('settled');
+  heroColors.classList.remove('fading');
+  heroColorName.textContent = heroShade;
+}
+function scheduleColors() {
+  clearTimeout(cycleTimer);
+  if (userPaused || reducedMotion.matches || document.hidden || !heroVisible) {
+    settleHero();
+    return;
+  }
+  cycleTimer = setTimeout(() => {
+    nextHeroShade = shadeNames[(shadeNames.indexOf(heroShade) + 1) % shadeNames.length];
+    setHeroShade(nextHeroShade, '--next-');
+    heroColors.classList.remove('settled');
+    heroColors.classList.add('fading');
+    fadeTimer = setTimeout(() => {
+      settleHero();
+      scheduleColors();
+    }, 1600);
+  }, 4900);
+}
+function updatePlayback() {
+  playback.hidden = reducedMotion.matches;
+  playback.textContent = userPaused ? 'Play colors' : 'Pause colors';
+  playback.setAttribute('aria-label', userPaused ? 'Play automatic color preview' : 'Pause automatic color preview');
+}
+function chooseHeroColor(name) {
+  userPaused = true;
+  scheduleColors();
+  heroShade = colorShades[name] ? name : 'Chic';
+  settleHero();
+  updatePlayback();
+}
+playback.addEventListener('click', () => {
+  userPaused = !userPaused;
+  updatePlayback();
+  scheduleColors();
+});
+document.addEventListener('visibilitychange', scheduleColors);
+reducedMotion.addEventListener('change', () => {
+  updatePlayback();
+  scheduleColors();
+});
+new IntersectionObserver(([entry]) => {
+  heroVisible = entry.isIntersecting;
+  scheduleColors();
+}, { threshold: 0 }).observe(heroColors);
+setHeroShade(heroShade);
+updatePlayback();
+
+
 function updateMessage() {
   const location = visit.value === 'home' ? 'for home service within Mt. Claire Village' : 'at Generoso Sari-Sari Store, Phase 2, Mt. Claire Village';
   const message = `Hi Sharline! I'd like to ask about ${select.value.toLowerCase()} ${location}. ${color.value ? `My color preference is ${color.value}. ` : ""}What schedules are available? Please confirm the final quote. Thank you!`;
@@ -41,6 +115,7 @@ color.addEventListener('change', updateMessage);
 color.addEventListener('change', syncColorButtons);
 function syncColorButtons() {
   updateColorPreview(color.value);
+  chooseHeroColor(color.value);
   document.querySelectorAll('[data-color]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.color === color.value)));
 }
 updateMessage();
