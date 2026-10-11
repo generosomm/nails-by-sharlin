@@ -9,3 +9,6 @@
 @media(max-width:700px){.nail-fan{transform:translateX(-50%) rotateX(8deg) scale(.66)}.sculpture{overflow:clip}.hero-copy,.booking,.contact-copy{min-width:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.button:hover{transform:none}}
 
+
+.home-note{font-size:13px;color:var(--plum);margin:10px 0 0}.visit-label{margin-top:18px}.contact-copy strong{font-weight:600}
+
