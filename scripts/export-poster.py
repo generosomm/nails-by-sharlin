@@ -12,20 +12,19 @@ import zxingcpp
 
 root=Path(__file__).resolve().parents[1]; out=root/'output/pdf'; tmp=root/'tmp/pdfs'; out.mkdir(parents=True,exist_ok=True); tmp.mkdir(parents=True,exist_ok=True)
 url='https://nails-by-sharline.vercel.app/'
-contact_url='https://www.facebook.com/sharlinemae.albino.71'
 pdfmetrics.registerFont(TTFont('Segoe','C:/Windows/Fonts/segoeui.ttf'))
 pdfmetrics.registerFont(TTFont('SegoeBold','C:/Windows/Fonts/segoeuib.ttf'))
 pdfmetrics.registerFont(TTFont('SegoeLight','C:/Windows/Fonts/segoeuil.ttf'))
 ink=HexColor('#302333'); plum=HexColor('#57334f'); muted=HexColor('#6b5f70'); line=HexColor('#ddd5e0')
-q=QrCodeWidget(contact_url,barLevel='M'); q.qr.make(); modules=q.qr.modules; n=len(modules); border=4; scale=20
+q=QrCodeWidget(url,barLevel='M'); q.qr.make(); modules=q.qr.modules; n=len(modules); border=4; scale=20
 im=Image.new('RGB',((n+border*2)*scale,)*2,'white'); draw=ImageDraw.Draw(im)
 for row in range(n):
  for col in range(n):
   if modules[row][col]:
    x=(col+border)*scale; y=(row+border)*scale
    draw.rectangle((x,y,x+scale-1,y+scale-1),fill='black')
-qr_path=out/'sharline-facebook-qr.png'; im.save(qr_path)
-assert zxingcpp.read_barcode(im).text==contact_url
+qr_path=out/'sharline-website-qr.png'; im.save(qr_path)
+assert zxingcpp.read_barcode(im).text==url
 
 from fontTools.ttLib import TTFont as FontToolsFont
 for name,file in [('Display','clash-display-600'),('Body','satoshi-400'),('Bold','satoshi-700')]:
@@ -81,7 +80,7 @@ qr_x=w-158;qr_y=100;qr_size=112
 c.drawImage(str(qr_path),qr_x,qr_y,width=qr_size,height=qr_size)
 c.setFont('Bold',11);c.setFillColor(plum);c.drawCentredString(qr_x+qr_size/2,85,'Scan to message')
 c.drawCentredString(qr_x+qr_size/2,71,'Sharline')
-c.linkURL(contact_url,(qr_x,qr_y,qr_x+qr_size,qr_y+qr_size),relative=0)
+c.linkURL(url,(qr_x,qr_y,qr_x+qr_size,qr_y+qr_size),relative=0)
 
 c.showPage();c.save()
 r=PdfReader(str(path));assert len(r.pages)==1
@@ -95,6 +94,6 @@ assert 'Scan to view' not in extracted
 assert 'gel polish' not in extracted.lower()
 assert '₱200' not in extracted
 pdf=pdfium.PdfDocument(str(path));preview=pdf[0].render(scale=300/72).to_pil();preview.save(out/'nails-by-sharline-a4-price-poster.png',dpi=(300,300));pdf[0].render(scale=1.5).to_pil().save(out/'nails-by-sharline-a4-preview.png')
-assert any(x.text==contact_url for x in zxingcpp.read_barcodes(preview)),'Rendered poster QR failed'
-assert any(x.text==contact_url for x in zxingcpp.read_barcodes(preview.resize((1240,1754)))),'Half-size QR failed'
+assert any(x.text==url for x in zxingcpp.read_barcodes(preview)),'Rendered poster QR failed'
+assert any(x.text==url for x in zxingcpp.read_barcodes(preview.resize((1240,1754)))),'Half-size QR failed'
 print('PASS: single A4 page, all prices/contact/location verified, standalone and rendered QR decoded at full and half size. PDF and 300dpi PNG saved.')
