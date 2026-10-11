@@ -42,43 +42,43 @@ def right(x,y,s,size=12,font='Body',color=ink):
  c.setFillColor(color);c.setFont(font,size);c.drawRightString(x,y,s)
 def rule(y):
  c.setStrokeColor(line);c.setLineWidth(.6);c.line(36,y,w-36,y)
-# White paper keeps the poster economical to print; plum and lavender carry the brand.
-text(36,796,'s.',33,'Display',plum);text(77,800,'nails by sharline',12,'Bold',plum)
-rule(781)
-art=Image.open(root/'assets/poster-nails.png');art_width=244;art_height=art_width*art.height/art.width
-c.drawImage(str(root/'assets/poster-nails.png'),315,619,width=art_width,height=art_height,mask='auto')
-text(36,718,'Your little',48,'Display',plum)
-c.saveState();t=c.beginText(60,664);t.setFont('Display',46);t.setTextRenderMode(1);c.setStrokeColor(plum);c.setLineWidth(.65);t.textOut('nail reset.');t.setTextRenderMode(0);c.drawText(t);c.restoreState()
-
-rule(602)
-
-rows=[('Manicure','₱100'),('Pedicure','₱100'),('Foot spa','₱250'),('Foot spa + pedicure','₱300'),('All three','₱400')]
+# Print hierarchy: sculptural hero, distinctive display type and large prices.
+text(36,793,'s.',40,'Display',plum);text(89,798,'nails by sharline',22,'Display',plum)
+rule(775)
+art=Image.open(root/'assets/poster-nails.png');art_width=230;art_height=art_width*art.height/art.width
+c.drawImage(str(root/'assets/poster-nails.png'),329,612,width=art_width,height=art_height,mask='auto')
+text(36,710,'Your little',48,'Display',plum)
+c.saveState();t=c.beginText(54,652);t.setFont('Display',46);t.setTextRenderMode(1);c.setStrokeColor(plum);c.setLineWidth(.8);t.textOut('nail reset.');t.setTextRenderMode(0);c.drawText(t);c.restoreState()
+rule(600)
+rows=[('Manicure','₱100'),('Pedicure','₱100'),('Foot spa','₱250'),('Foot spa + pedicure','₱300')]
 for i,(label,price) in enumerate(rows):
- y=562-i*50
- text(36,y,label,22,'Body');right(w-36,y,price,25,'SegoeBold',plum);rule(y-16)
-text(36,331,'All three: manicure + pedicure + foot spa.',10,color=muted)
-text(36,292,'Available colors',11,'Bold',plum)
+ y=554-i*50
+ text(36,y,label,25,'Display',plum);right(w-36,y-1,price,34,'SegoeBold',plum);rule(y-16)
+c.setFillColor(plum);c.roundRect(28,325,w-56,60,14,fill=1,stroke=0)
+text(44,353,'All three',25,'Display',HexColor('#ffffff'))
+right(w-44,346,'₱400',36,'SegoeBold',HexColor('#ffffff'))
+text(44,335,'Manicure + pedicure + foot spa',11,'Body',HexColor('#ffffff'))
+text(36,300,'Available colors',12,'Bold',plum)
 swatches=['#e2bb06','#ad2924','#a7b3d4','#9c979b','#f4f1f3','#b68a5d','#b8bdb8','#c34a99','#202023']
 for i,shade in enumerate(swatches):
  x=48+i*(w-96)/8
- c.setFillColor(HexColor(shade));c.setStrokeColor(line);c.setLineWidth(.65);c.circle(x,265,11,fill=1,stroke=1)
- c.saveState();c.setFillAlpha(.28);c.setFillColor(HexColor('#ffffff'));c.circle(x-3,269,3,fill=1,stroke=0);c.restoreState()
-text(36,242,'Actual shades may vary.',7.5,color=muted)
-c.setFillColor(HexColor('#eee8f1'));c.roundRect(28,44,w-56,162,18,fill=1,stroke=0)
-text(46,184,'Message on Facebook',12,'Bold',plum)
-text(46,162,'Sharline Albino (Camille)',17,'Display',plum)
-
-c.linkURL('https://www.facebook.com/sharlinemae.albino.71',(46,140,316,178),relative=0)
-text(46,125,'Generoso Sari-Sari Store',10,'Bold')
-text(46,111,'Phase 2, Mt. Claire Village',10)
-text(46,94,'Home service within Mt. Claire Village only.',8.5,'Bold',plum)
-
-text(46,59,'nails-by-sharline.vercel.app',12,'Bold',plum)
-c.linkURL(url,(46,53,322,72),relative=0)
-qr_x=w-151;qr_y=87;qr_size=104
+ c.setFillColor(HexColor(shade));c.setStrokeColor(line);c.setLineWidth(.65);c.circle(x,278,12,fill=1,stroke=1)
+ c.saveState();c.setFillAlpha(.28);c.setFillColor(HexColor('#ffffff'));c.circle(x-3,282,3,fill=1,stroke=0);c.restoreState()
+text(36,255,'Actual shades may vary.',8,color=muted)
+c.setFillColor(HexColor('#eee8f1'));c.roundRect(28,28,w-56,208,18,fill=1,stroke=0)
+text(44,212,'Message on Facebook',14,'Bold',plum)
+text(44,183,'Sharline Albino',27,'Display',plum)
+text(44,166,'(Camille)',12,'Body',plum)
+c.linkURL('https://www.facebook.com/sharlinemae.albino.71',(44,160,400,221),relative=0)
+text(44,139,'Generoso Sari-Sari Store',14,'Bold')
+text(44,121,'Phase 2, Mt. Claire Village',13)
+text(44,97,'Home service available',14,'Bold',plum)
+text(44,80,'Within Mt. Claire Village only',12)
+text(44,46,'nails-by-sharline.vercel.app',14,'Bold',plum)
+c.linkURL(url,(44,40,370,61),relative=0)
+qr_x=w-158;qr_y=100;qr_size=112
 c.drawImage(str(qr_path),qr_x,qr_y,width=qr_size,height=qr_size)
-c.setFont('Body',8);c.setFillColor(muted);c.drawCentredString(qr_x+qr_size/2,75,'Scan to view')
-
+c.setFont('Bold',10);c.setFillColor(plum);c.drawCentredString(qr_x+qr_size/2,85,'Scan to view')
 c.linkURL(url,(qr_x,qr_y,qr_x+qr_size,qr_y+qr_size),relative=0)
 
 c.showPage();c.save()
@@ -86,7 +86,7 @@ r=PdfReader(str(path));assert len(r.pages)==1
 assert abs(float(r.pages[0].mediabox.width)-595.276)<.1
 assert abs(float(r.pages[0].mediabox.height)-841.89)<.1
 extracted=r.pages[0].extract_text()
-for term in ['₱100','₱250','₱300','₱400','manicure + pedicure + foot spa','Sharline Albino (Camille)','nails-by-sharline.vercel.app','Generoso Sari-Sari Store','Phase 2, Mt. Claire Village','Home service within Mt. Claire Village only.']:
+for term in ['₱100','₱250','₱300','₱400','Manicure + pedicure + foot spa','Sharline Albino','(Camille)','nails-by-sharline.vercel.app','Generoso Sari-Sari Store','Phase 2, Mt. Claire Village','Home service available','Within Mt. Claire Village only']:
  assert term in extracted,term
 assert 'gel polish' not in extracted.lower()
 assert '₱200' not in extracted
