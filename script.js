@@ -160,3 +160,39 @@ document.querySelector('#copy-inquiry').addEventListener('click', async () => {
     status.textContent = 'Select and copy the inquiry above, then paste it into your Facebook message.';
   }
 });
+
+// Track the section at the reading edge; scroll work is limited to one frame.
+const header = document.querySelector('.header');
+const navTargets = [
+  [document.querySelector('#home'), header.querySelector('.brand')],
+  [document.querySelector('#services'), header.querySelector('[href="#services"]')],
+  [document.querySelector('#contact'), header.querySelector('[href="#contact"]')]
+];
+let navFrame = 0;
+let headerHeight = 0;
+function markCurrentSection() {
+  navFrame = 0;
+  let active = navTargets[0][1];
+  const readingEdge = headerHeight + Math.min(innerHeight * .2, 140);
+  navTargets.forEach(([section, link]) => {
+    if (section.getBoundingClientRect().top <= readingEdge) active = link;
+  });
+  if (scrollY > 0 && scrollY + innerHeight >= document.documentElement.scrollHeight - 2) {
+    active = navTargets[2][1];
+  }
+  navTargets.forEach(([, link]) => {
+    if (link === active) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+}
+function queueNavUpdate() {
+  if (!navFrame) navFrame = requestAnimationFrame(markCurrentSection);
+}
+new ResizeObserver(([entry]) => {
+  headerHeight = entry.target.getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--header-offset', `${Math.ceil(headerHeight + 24)}px`);
+  queueNavUpdate();
+}).observe(header);
+addEventListener('scroll', queueNavUpdate, { passive: true });
+addEventListener('resize', queueNavUpdate, { passive: true });
+markCurrentSection();

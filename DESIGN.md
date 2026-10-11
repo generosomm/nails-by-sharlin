@@ -13,3 +13,5 @@ Contact: lavender studio panel, visit details left and accessible native inquiry
 Critique: oversized lettering and overlapping glossy nails carry the identity. Remove repeated decorative cards and animated entrances. Use a single palette and control vocabulary. Preserve the same composition on mobile with reduced scale and natural wrapping. No heavy 3D runtime or per-frame JavaScript.
 
 Color cycling: 3-second cycle, 1.2-second opacity crossfade; pause/play, manual selection pause, hidden-tab/offscreen pause and reduced-motion support. Hero and booking selections synchronize, autoplay never changes the inquiry.
+
+Navigation: persistent light header with Services and Let’s talk; active section underline and aria-current on the home logo or section link. Header height sets anchor clearance. Passive scroll updates batch into one animation frame only while scrolling.
