@@ -79,3 +79,17 @@ html{scroll-padding-top:var(--header-offset)}
  .hero-colors .pedestal{left:50%;width:205px;height:46px;bottom:0}
 }
 @media(max-width:380px){.hero-composition{height:335px}.sculpture{top:125px;height:198px}.hero-colors .nail-fan{transform:translateX(-50%) rotateX(8deg) rotate(-10deg) scale(.46)}}
+
+/* Quiet copy, compact sections, and optional color choices. */
+.hero-copy{align-self:center}
+.services{padding:48px 0 56px;gap:48px;grid-template-columns:1fr 2fr}
+.section-heading h2{font-size:38px}
+.contact-copy h2{margin:0 0 16px;font-size:clamp(36px,4vw,52px)}
+.facebook-contact{margin-top:0}
+.color-options{margin-top:18px;border-bottom:1px solid var(--line)}
+.color-options summary{font-size:14px;color:var(--ink)}
+.color-options .booking-colors{margin:8px 0 16px}
+.color-options legend{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.contact{margin-bottom:32px}
+@media(max-width:800px){.services{grid-template-columns:1fr;gap:20px}.contact{gap:26px}.contact-copy h2{font-size:42px}}
+@media(max-width:600px){.hero-copy{text-align:center}.hero{padding-bottom:32px}.services{padding:32px 0 40px}.section-heading h2{font-size:32px}.contact-copy h2{font-size:36px}.contact-copy>p:not(.contact-intro){margin-top:14px}}

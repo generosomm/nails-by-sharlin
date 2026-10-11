@@ -17,3 +17,7 @@ Color cycling: 3-second cycle, 1.2-second opacity crossfade; pause/play, manual 
 Navigation: persistent light header with Services and Let’s talk; active section underline and aria-current on the home logo or section link. Header height sets anchor clearance. Passive scroll updates batch into one animation frame only while scrolling.
 
 Hero refinement: live desktop now uses the compact thumbnail composition, with smaller nails and tighter type spacing. Mobile places the headline above the sculpture. Thumbnail capture uses production hero styling without alternate layout overrides.
+
+
+## Minimal content pass
+One hero headline, interactive shade preview, five priced services, and a Facebook inquiry. Location and home service details appear once in the contact section. Optional shade choices and phone contact expand on demand. The A4 poster prioritizes prices, color circles, Facebook name, location and website QR.

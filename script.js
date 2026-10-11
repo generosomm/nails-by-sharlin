@@ -125,6 +125,7 @@ function syncColorButtons() {
   document.querySelectorAll('[name="color-preference"]').forEach(input => {
     input.checked = input.value === color.value;
   });
+  document.querySelector("#color-choice-summary").textContent = `Color: ${color.value || "Help me choose"}`;
   updateColorPreview(color.value);
   chooseHeroColor(color.value);
   document.querySelectorAll('[data-color]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.color === color.value)));
