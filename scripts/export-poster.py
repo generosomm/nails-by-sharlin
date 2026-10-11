@@ -62,7 +62,7 @@ text(36,300,'Available colors',12,'Bold',plum)
 swatches=['#e2bb06','#ad2924','#a7b3d4','#9c979b','#f4f1f3','#b68a5d','#b8bdb8','#c34a99','#202023']
 for i,shade in enumerate(swatches):
  x=48+i*(w-96)/8
- c.setFillColor(HexColor(shade));c.setStrokeColor(line);c.setLineWidth(.65);c.circle(x,278,12,fill=1,stroke=1)
+ c.setFillColor(HexColor(shade));c.setStrokeColor(HexColor('#6b5f70') if i==4 else line);c.setLineWidth(1.5 if i==4 else .65);c.circle(x,278,12,fill=1,stroke=1)
  c.saveState();c.setFillAlpha(.28);c.setFillColor(HexColor('#ffffff'));c.circle(x-3,282,3,fill=1,stroke=0);c.restoreState()
 text(36,255,'Actual shades may vary.',8,color=muted)
 c.setFillColor(HexColor('#eee8f1'));c.roundRect(28,28,w-56,208,18,fill=1,stroke=0)
