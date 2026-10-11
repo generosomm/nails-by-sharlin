@@ -64,3 +64,13 @@ document.querySelector('#copy-number').addEventListener('click', async () => {
     status.textContent = 'Select and copy this number: +63 963 509 1844';
   }
 });
+
+document.querySelector('#copy-inquiry').addEventListener('click', async () => {
+  const status = document.querySelector('#inquiry-status');
+  try {
+    await navigator.clipboard.writeText(preview.textContent);
+    status.textContent = 'Inquiry copied. Paste it into your Facebook message.';
+  } catch {
+    status.textContent = 'Select and copy the inquiry above, then paste it into your Facebook message.';
+  }
+});

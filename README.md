@@ -23,3 +23,5 @@ The decorative nail illustration is not an exact color sample or a photograph of
 ## Hosting
 
 This buildless website works on GitHub Pages, Vercel, Netlify or any static host. Publish the repository root. No credentials, external dependencies or build step are required.
+
+Facebook is the preferred contact channel. Visitors can copy their selected service/color/visit inquiry and open the supplied profile, then tap Message and paste it. Copying does not send a message. SMS and phone remain secondary options.
