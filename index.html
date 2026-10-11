@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3f7">
+  <meta name="description" content="Manicure, pedicure, foot spa and gel polish by Sharlin Camille Albino. Explore services and text Sharlin to ask about an appointment.">
+  <meta property="og:title" content="Nails by Sharlin | A little polish. A whole mood.">
+  <meta property="og:description" content="Manicure from ₱100, foot spa ₱200, gel polish ₱250. Text Sharlin to ask about an appointment.">
+  <meta property="og:type" content="website">
+  <title>Nails by Sharlin | Nail services</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header wrap">
+    <a class="brand" href="#" aria-label="Nails by Sharlin, home"><span class="brand-mark" aria-hidden="true">s.</span><span>nails by sharlin</span></a>
+    <nav aria-label="Main navigation"><a href="#services">Services</a><a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="intro">A little time for you.</p>
+        <h1 id="hero-title">A little polish.<br>A whole mood.</h1>
+        <p class="lead">Fresh nails. Soft colors. Your kind of little reset.</p>
+        <a class="button" href="#contact">Plan your nail day <span aria-hidden="true">↗</span></a>
+        <p class="byline">With Sharlin Camille Albino</p>
+      </div>
+      <div class="studio">
+        <div class="sculpture" aria-hidden="true">
+          <div class="halo"></div>
+          <div class="nail-fan"><div class="nail nail-1"></div><div class="nail nail-2"></div><div class="nail nail-3"></div><div class="nail nail-4"></div><div class="nail nail-5"></div></div>
+          <div class="pedestal"></div><span class="spark spark-1">✧</span><span class="spark spark-2">✧</span>
+        </div>
+        <div class="palette"><p>Pick a mood <span id="shade-name" aria-live="polite">Berry</span></p><div class="swatches" role="group" aria-label="Preview nail colors"><button class="swatch berry" data-shade="berry" aria-label="Berry" aria-pressed="true"></button><button class="swatch rose" data-shade="rose" aria-label="Rose" aria-pressed="false"></button><button class="swatch sage" data-shade="sage" aria-label="Sage" aria-pressed="false"></button><button class="swatch pearl" data-shade="pearl" aria-label="Pearl" aria-pressed="false"></button></div></div>
+        <p class="visual-note">Color inspiration. Ask Sharlin about available shades.</p>
+      </div>
+    </section>
+    <section class="services wrap" id="services" aria-labelledby="services-title">
+      <div class="section-heading"><div><p class="intro">The little reset menu</p><h2 id="services-title">Simple care.<br>A lovely finish.</h2></div><p>Choose your service.<br>Make a little room for yourself.</p></div>
+      <div class="service-list">
+        <a class="service" href="#contact" data-service="Manicure"><span class="service-symbol" aria-hidden="true">✧</span><div><h3>Manicure</h3><p>A fresh start for your hands.</p></div><span class="price">₱100</span><span class="service-arrow" aria-hidden="true">↗</span></a>
+        <a class="service" href="#contact" data-service="Pedicure"><span class="service-symbol" aria-hidden="true">◡</span><div><h3>Pedicure</h3><p>A little care, down to your toes.</p></div><span class="price">₱100</span><span class="service-arrow" aria-hidden="true">↗</span></a>
+        <a class="service" href="#contact" data-service="Foot Spa"><span class="service-symbol" aria-hidden="true">≈</span><div><h3>Foot spa</h3><p>A pause for your hardworking feet.</p></div><span class="price">₱200</span><span class="service-arrow" aria-hidden="true">↗</span></a>
+        <a class="service" href="#contact" data-service="Gel Polish"><span class="service-symbol" aria-hidden="true">◇</span><div><h3>Gel polish</h3><p>A glossy touch of personality.</p></div><span class="price">₱250</span><span class="service-arrow" aria-hidden="true">↗</span></a>
+      </div>
+      <p class="price-note">Custom gel polish designs have additional charges. Send your inspiration to Sharlin for a quote.</p>
+    </section>
+    <section class="contact wrap" id="contact" aria-labelledby="contact-title">
+      <div class="contact-copy"><p class="intro">Your next little reset</p><h2 id="contact-title">Let's make it<br>a nail day.</h2><p>Have a color in mind? A design you saved?<br>Text Sharlin and let's talk about it.</p><a class="phone" href="tel:+639635091844">+63 963 509 1844 <span aria-hidden="true">↗</span></a></div>
+      <div class="booking"><h3>Start the conversation</h3><label for="service-select">I'd like to ask about</label><select id="service-select"><option>Manicure</option><option>Pedicure</option><option>Foot Spa</option><option>Gel Polish</option><option>Manicure + Pedicure</option></select><p class="message-preview" id="message-preview"></p><a class="button" id="text-link" href="sms:+639635091844">Text Sharlin <span aria-hidden="true">↗</span></a><p class="booking-note">Opens your messaging app. Sharlin will confirm availability, location and your final quote.</p><button class="copy-number" id="copy-number" type="button">Copy phone number</button><p class="copy-status" id="copy-status" role="status"></p></div>
+    </section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">s.</span><span>nails by sharlin</span></a><p>Little details. Lovely days.</p><a href="https://www.facebook.com/search/top?q=Sharlin%20Camille%20Albino" target="_blank" rel="noopener noreferrer">Find Sharlin on Facebook <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>
