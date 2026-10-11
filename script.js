@@ -4,7 +4,7 @@ const preview = document.querySelector('#message-preview');
 const visit = document.querySelector('#visit-select');
 function updateMessage() {
   const location = visit.value === 'home' ? 'for home service within Mt. Claire Village' : 'at Generoso Sari-Sari Store, Phase 2, Mt. Claire Village';
-  const message = `Hi Sharlin! I'd like to ask about ${select.value.toLowerCase()} ${location}. What schedules and shades are available? Please confirm the final quote. Thank you!`;
+  const message = `Hi Sharlin! I'd like to ask about ${select.value.toLowerCase()} ${location}. What schedules are available? Please confirm the final quote. Thank you!`;
   preview.textContent = message;
   const separator = /iPad|iPhone|iPod/.test(navigator.userAgent) ? '&' : '?';
   textLink.href = `sms:+639635091844${separator}body=${encodeURIComponent(message)}`;
