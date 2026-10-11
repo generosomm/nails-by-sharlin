@@ -47,3 +47,35 @@ html{scroll-padding-top:var(--header-offset)}
 @media(max-width:380px){.header nav{gap:12px}.header .brand{gap:6px;font-size:12px}.header .brand-mark{font-size:34px}}
 
 .header .brand{border-bottom:2px solid transparent}.header .brand[aria-current=location]{border-bottom-color:var(--plum)}
+
+/* The live hero and social thumbnail share the same compact composition. */
+@media(min-width:801px){
+ .wrap{max-width:1104px}
+ .header{padding:16px 0}
+ .hero-top{padding:0}
+ .hero-composition{height:300px;margin:4px 0 16px}
+ .hero h1{font-size:clamp(76px,9.333vw,112px);top:8px}
+ .hero h1 .outline-title{margin-top:32px}
+ .sculpture{height:290px}
+ .hero-colors .nail-fan{top:-5px;transform:translateX(-50%) rotateX(8deg) rotate(-10deg) scale(.78)}
+ .hero-colors .pedestal{width:280px;height:55px;bottom:0}
+ .studio{padding:10px 12px}
+ .home-note{margin-top:12px}
+}
+@media(min-width:601px) and (max-width:800px){
+ .hero-composition{height:290px;margin-bottom:16px}
+ .hero h1{font-size:10vw;top:8px}
+ .hero h1 .outline-title{margin-top:32px}
+ .sculpture{height:270px}
+ .hero-colors .nail-fan{top:-14px;transform:translateX(-50%) rotateX(8deg) rotate(-10deg) scale(.62)}
+ .hero-colors .pedestal{width:225px;height:50px}
+}
+@media(max-width:600px){
+ .hero-composition{height:365px}
+ .hero h1{font-size:15vw;top:16px}
+ .hero h1 .outline-title{margin-top:12px;margin-left:8%}
+ .sculpture{top:142px;height:210px}
+ .hero-colors .nail-fan{left:50%;top:-70px;transform:translateX(-50%) rotateX(8deg) rotate(-10deg) scale(.52)}
+ .hero-colors .pedestal{left:50%;width:205px;height:46px;bottom:0}
+}
+@media(max-width:380px){.hero-composition{height:335px}.sculpture{top:125px;height:198px}.hero-colors .nail-fan{transform:translateX(-50%) rotateX(8deg) rotate(-10deg) scale(.46)}}

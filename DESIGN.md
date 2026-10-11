@@ -15,3 +15,5 @@ Critique: oversized lettering and overlapping glossy nails carry the identity. R
 Color cycling: 3-second cycle, 1.2-second opacity crossfade; pause/play, manual selection pause, hidden-tab/offscreen pause and reduced-motion support. Hero and booking selections synchronize, autoplay never changes the inquiry.
 
 Navigation: persistent light header with Services and Let’s talk; active section underline and aria-current on the home logo or section link. Header height sets anchor clearance. Passive scroll updates batch into one animation frame only while scrolling.
+
+Hero refinement: live desktop now uses the compact thumbnail composition, with smaller nails and tighter type spacing. Mobile places the headline above the sculpture. Thumbnail capture uses production hero styling without alternate layout overrides.
